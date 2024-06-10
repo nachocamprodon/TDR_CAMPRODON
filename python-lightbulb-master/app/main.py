@@ -9,9 +9,9 @@ from device import Device
 load_dotenv()
 
 DEVICE = Device(
-    device_id="bf12b634afd310b65f8kxr",
-    ip_address="176.84.39.26",
-    locale_key="4993b187b5c7491bb838812ec3ac834b",
+    device_id="",
+    ip_address="",
+    locale_key="",
 ).get_device()
 
 def main(page: ft.Page):

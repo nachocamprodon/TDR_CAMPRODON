@@ -1,129 +1,230 @@
+switch_led	Boolean	
+"{true,false}"
+work_mode	Enum	
 {
-  "result": {
-    "category": "dj",
-    "functions": [
-      {
-        "code": "switch_led",
-        "desc": "switch led",
-        "name": "switch led",
-        "type": "Boolean",
-        "values": "{}"
-      },
-      {
-        "code": "work_mode",
-        "desc": "work mode",
-        "name": "work mode",
-        "type": "Enum",
-        "values": "{\"range\":[\"white\",\"colour\",\"scene\",\"music\"]}"
-      },
-      {
-        "code": "bright_value_v2",
-        "desc": "bright value v2",
-        "name": "bright value v2",
-        "type": "Integer",
-        "values": "{\"min\":10,\"max\":1000,\"scale\":0,\"step\":1}"
-      },
-      {
-        "code": "temp_value_v2",
-        "desc": "temp value v2",
-        "name": "temp value v2",
-        "type": "Integer",
-        "values": "{\"min\":0,\"max\":1000,\"scale\":0,\"step\":1}"
-      },
-      {
-        "code": "colour_data_v2",
-        "desc": "colour data v2",
-        "name": "colour data v2",
-        "type": "Json",
-        "values": "{\"h\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":360,\"step\":1},\"s\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1},\"v\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1}}"
-      },
-      {
-        "code": "scene_data_v2",
-        "desc": "scene data v2",
-        "name": "scene data v2",
-        "type": "Json",
-        "values": "{\"scene_num\":{\"min\":1,\"scale\":0,\"max\":8,\"step\":1},\"scene_units\": {\"unit_change_mode\":{\"range\":[\"static\",\"jump\",\"gradient\"]},\"unit_switch_duration\":{\"min\":0,\"scale\":0,\"max\":100,\"step\":1},\"unit_gradient_duration\":{\"min\":0,\"scale\":0,\"max\":100,\"step\":1},\"bright\":{\"min\":0,\"scale\":0,\"max\":1000,\"step\":1},\"temperature\":{\"min\":0,\"scale\":0,\"max\":1000,\"step\":1},\"h\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":360,\"step\":1},\"s\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1},\"v\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1}}}"
-      },
-      {
-        "code": "countdown_1",
-        "desc": "countdown 1",
-        "name": "countdown 1",
-        "type": "Integer",
-        "values": "{\"unit\":\"s\",\"min\":0,\"max\":86400,\"scale\":0,\"step\":1}"
-      },
-      {
-        "code": "music_data",
-        "desc": "music data",
-        "name": "music data",
-        "type": "Json",
-        "values": "{\"change_mode\":{\"range\":[\"direct\",\"gradient\"]}, \"bright\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1}, \"temperature\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1}, \"h\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":360,\"step\":1},\"s\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":255,\"step\":1},\"v\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":255,\"step\":1}}"
-      },
-      {
-        "code": "control_data",
-        "desc": "control data",
-        "name": "control data",
-        "type": "Json",
-        "values": "{\"change_mode\":{\"range\":[\"direct\",\"gradient\"]}, \"bright\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1}, \"temperature\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":1000,\"step\":1}, \"h\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":360,\"step\":1},\"s\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":255,\"step\":1},\"v\":{\"min\":0,\"scale\":0,\"unit\":\"\",\"max\":255,\"step\":1}}"
-      },
-      {
-        "code": "rhythm_mode",
-        "desc": "rhythm mode",
-        "name": "rhythm mode",
-        "type": "Raw",
-        "values": "{\"maxlen\":255}"
-      },
-      {
-        "code": "sleep_mode",
-        "desc": "sleep mode",
-        "name": "sleep mode",
-        "type": "Raw",
-        "values": "{\"maxlen\":255}"
-      },
-      {
-        "code": "wakeup_mode",
-        "desc": "wakeup mode",
-        "name": "wakeup mode",
-        "type": "Raw",
-        "values": "{\"maxlen\":255}"
-      },
-      {
-        "code": "power_memory",
-        "desc": "power memory",
-        "name": "power memory",
-        "type": "Raw",
-        "values": "{}"
-      },
-      {
-        "code": "do_not_disturb",
-        "desc": "do not disturb",
-        "name": "do not disturb",
-        "type": "Boolean",
-        "values": "{}"
-      },
-      {
-        "code": "remote_switch",
-        "desc": "remote switch",
-        "name": "remote switch",
-        "type": "Boolean",
-        "values": "{}"
-      },
-      {
-        "code": "cycle_timing",
-        "desc": "cycle timing",
-        "name": "cycle timing",
-        "type": "Raw",
-        "values": "{}"
-      },
-      {
-        "code": "random_timing",
-        "desc": "random timing",
-        "name": "random timing",
-        "type": "Raw",
-        "values": "{}"
-      }
+  "range": [
+    "white",
+    "colour",
+    "scene",
+    "music"
+  ]
+}
+bright_value_v2	Integer	
+{
+  "min": 10,
+  "max": 1000,
+  "scale": 0,
+  "step": 1
+}
+temp_value_v2	Integer	
+{
+  "min": 0,
+  "max": 1000,
+  "scale": 0,
+  "step": 1
+}
+colour_data_v2	Json	
+{
+  "h": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 360,
+    "step": 1
+  },
+  "s": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 1000,
+    "step": 1
+  },
+  "v": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 1000,
+    "step": 1
+  }
+}
+scene_data_v2	Json	
+{
+  "scene_num": {
+    "min": 1,
+    "scale": 0,
+    "max": 8,
+    "step": 1
+  },
+  "scene_units": {
+    "unit_change_mode": {
+      "range": [
+        "static",
+        "jump",
+        "gradient"
+      ]
+    },
+    "unit_switch_duration": {
+      "min": 0,
+      "scale": 0,
+      "max": 100,
+      "step": 1
+    },
+    "unit_gradient_duration": {
+      "min": 0,
+      "scale": 0,
+      "max": 100,
+      "step": 1
+    },
+    "bright": {
+      "min": 0,
+      "scale": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "temperature": {
+      "min": 0,
+      "scale": 0,
+      "max": 1000,
+      "step": 1
+    },
+    "h": {
+      "min": 0,
+      "scale": 0,
+      "unit": "",
+      "max": 360,
+      "step": 1
+    },
+    "s": {
+      "min": 0,
+      "scale": 0,
+      "unit": "",
+      "max": 1000,
+      "step": 1
+    },
+    "v": {
+      "min": 0,
+      "scale": 0,
+      "unit": "",
+      "max": 1000,
+      "step": 1
+    }
+  }
+}
+countdown_1	Integer	
+{
+  "unit": "s",
+  "min": 0,
+  "max": 86400,
+  "scale": 0,
+  "step": 1
+}
+music_data	Json	
+{
+  "change_mode": {
+    "range": [
+      "direct",
+      "gradient"
     ]
   },
-  "success": true,
-  "t": 1718616090522,
-  "tid": "fb3a9bb42c8a11ef9073c64ba2abc1e6"
+  "bright": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 1000,
+    "step": 1
+  },
+  "temperature": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 1000,
+    "step": 1
+  },
+  "h": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 360,
+    "step": 1
+  },
+  "s": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 255,
+    "step": 1
+  },
+  "v": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 255,
+    "step": 1
+  }
 }
+control_data	Json	
+{
+  "change_mode": {
+    "range": [
+      "direct",
+      "gradient"
+    ]
+  },
+  "bright": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 1000,
+    "step": 1
+  },
+  "temperature": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 1000,
+    "step": 1
+  },
+  "h": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 360,
+    "step": 1
+  },
+  "s": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 255,
+    "step": 1
+  },
+  "v": {
+    "min": 0,
+    "scale": 0,
+    "unit": "",
+    "max": 255,
+    "step": 1
+  }
+}
+rhythm_mode	Raw	
+{
+  "maxlen": 255
+}
+sleep_mode	Raw	
+{
+  "maxlen": 255
+}
+wakeup_mode	Raw	
+{
+  "maxlen": 255
+}
+power_memory	Raw	
+{}
+do_not_disturb	Boolean	
+"{true,false}"
+remote_switch	Boolean	
+"{true,false}"
+cycle_timing	Raw	
+{}
+random_timing	Raw	
+{}
